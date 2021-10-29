@@ -7,7 +7,7 @@
         function refreshFeetMetersLabels() {
             let value = document.getElementById('feetSlider').value;
             document.getElementById('feetLabel').innerText = value;
-            document.getElementById('metersLabel').innerText = Math.round(value * 3.280839895);
+            document.getElementById('metersLabel').innerText = Math.round(value / 3.280839895);
         }
 
         function refreshKnotsToKilometersPerHourLabels() {
