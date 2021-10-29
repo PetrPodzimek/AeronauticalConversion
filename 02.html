@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function refreshFeetMetersLabels() {
+            document.getElementById('feetLabel').innerText = document.getElementById('feetSlider').value;
+            document.getElementById('metersLabel').innerText = document.getElementById('metersSlider').value;
+        }
+        function refreshKnotsToKilometersPerHourLabels() {
+            document.getElementById('knotsLabel').innerText = document.getElementById('knotsSlider').value;
+            document.getElementById('kilometersPerHourLabel').innerText = document.getElementById('kilometersPerHourSlider').value;
+        }
+    </script>
+</head>
+<body onload="refreshFeetMetersLabels()">
+  <form id="feetMeter" title="Feets to Meters" name="Feet to Meters">
+      <b>Feet to Meters</b></br>
+      <output id="feetLabel" for="feetSlider"></output> Feet<br/>
+      <input id="feetSlider" type="range" max="30000" step="10" style="width: 100%"
+             oninput="document.getElementById('metersSlider').value = this.value / 3.280839895;refreshFeetMetersLabels()"
+      list="feetList">
+      <datalist id="feetList">
+          <option>0</option>
+          <option>1000</option>
+          <option>2000</option>
+          <option>3000</option>
+          <option>4000</option>
+          <option>5000</option>
+          <option>6000</option>
+          <option>7000</option>
+          <option>8000</option>
+          <option>9000</option>
+          <option>10000</option>
+          <option>11000</option>
+          <option>12000</option>
+          <option>13000</option>
+          <option>14000</option>
+          <option>15000</option>
+          <option>16000</option>
+          <option>17000</option>
+          <option>18000</option>
+          <option>19000</option>
+          <option>20000</option>
+          <option>21000</option>
+          <option>22000</option>
+          <option>23000</option>
+          <option>24000</option>
+          <option>25000</option>
+          <option>26000</option>
+          <option>27000</option>
+          <option>28000</option>
+          <option>29000</option>
+          <option>30000</option>
+      </datalist>
+      <input id="metersSlider" type="range" max="9144" step="" style="width: 100%"
+             oninput="document.getElementById('feetSlider').value = this.value * 3.280839895;refreshFeetMetersLabels()"
+      list="metersList">
+      <datalist id="metersList">
+          <option>0</option>
+          <option>300</option>
+          <option>600</option>
+          <option>900</option>
+          <option>1200</option>
+          <option>1500</option>
+          <option>1800</option>
+          <option>2100</option>
+          <option>2400</option>
+          <option>2700</option>
+          <option>3000</option>
+          <option>3300</option>
+          <option>3600</option>
+          <option>3900</option>
+          <option>4200</option>
+          <option>4500</option>
+          <option>4800</option>
+          <option>5100</option>
+          <option>5400</option>
+          <option>5700</option>
+          <option>6000</option>
+          <option>6300</option>
+          <option>6600</option>
+          <option>6900</option>
+          <option>7200</option>
+          <option>7500</option>
+          <option>7800</option>
+          <option>8100</option>
+          <option>8400</option>
+          <option>8700</option>
+          <option>9000</option>
+          <option>9300</option>
+          <option>9600</option>
+          <option>9900</option>
+      </datalist>
+      <br>
+      <output id="metersLabel" for="meterSlider"></output> Meters
+  </form>
+  <form id="knotsToKilometersPerHour" title="Knots to km/h" name="Knots to km/h">
+      <b>Knots to km/h</b></br>
+      <output id="knotsLabel" for="knotsSlider"></output> Knots<br/>
+      <input id="knotsSlider" type="range" max="300" style="width: 100%"
+             oninput="document.getElementById('kilometersPerHourSlider').value = this.value * 1.852;refreshKnotsToKilometersPerHourLabels()"
+      list="feetsList">
+      <datalist id="feetsList">
+          <option>0</option>
+          <option>1000</option>
+          <option>2000</option>
+          <option>3000</option>
+          <option>4000</option>
+          <option>5000</option>
+          <option>6000</option>
+          <option>7000</option>
+          <option>8000</option>
+          <option>9000</option>
+          <option>10000</option>
+          <option>11000</option>
+          <option>12000</option>
+          <option>13000</option>
+          <option>14000</option>
+          <option>15000</option>
+          <option>16000</option>
+          <option>17000</option>
+          <option>18000</option>
+          <option>19000</option>
+          <option>20000</option>
+          <option>21000</option>
+          <option>22000</option>
+          <option>23000</option>
+          <option>24000</option>
+          <option>25000</option>
+          <option>26000</option>
+          <option>27000</option>
+          <option>28000</option>
+          <option>29000</option>
+          <option>30000</option>
+      </datalist>
+      <input id="kilometersPerHourSlider" type="range" max="556" style="width: 100%"
+             oninput="document.getElementById('knotsSlider').value = this.value / 1.852;refreshKnotsToKilometersPerHourLabels()"
+      list="metersList">
+      <datalist id="metersList">
+          <option>0</option>
+          <option>300</option>
+          <option>600</option>
+          <option>900</option>
+          <option>1200</option>
+          <option>1500</option>
+          <option>1800</option>
+          <option>2100</option>
+          <option>2400</option>
+          <option>2700</option>
+          <option>3000</option>
+          <option>3300</option>
+          <option>3600</option>
+          <option>3900</option>
+          <option>4200</option>
+          <option>4500</option>
+          <option>4800</option>
+          <option>5100</option>
+          <option>5400</option>
+          <option>5700</option>
+          <option>6000</option>
+          <option>6300</option>
+          <option>6600</option>
+          <option>6900</option>
+          <option>7200</option>
+          <option>7500</option>
+          <option>7800</option>
+          <option>8100</option>
+          <option>8400</option>
+          <option>8700</option>
+          <option>9000</option>
+          <option>9300</option>
+          <option>9600</option>
+          <option>9900</option>
+      </datalist>
+      <br>
+      <output id="kilometersPerHourLabel" for="kilometersPerHourSlider"></output> Kilometers per hour
+  </form>
+</body>
+</html>
